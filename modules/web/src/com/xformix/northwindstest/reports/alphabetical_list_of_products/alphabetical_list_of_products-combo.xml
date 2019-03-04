@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://caption"
+        class="com.xformix.northwindstest.reports.alphabetical_list_of_products.Alphabetical_list_of_productsCombo"
+        focusComponent="navigationTable"
+        lookupComponent="navigationTable"
+        messagesPack="com.xformix.northwindstest.reports.alphabetical_list_of_products">
+    <dsContext>
+        <groupDatasource id="alphabeticallistofproductsDs"
+                    class="com.xformix.northwindstest.entity.AlphabeticalListOfProducts"
+                    view="alphabeticalListOfProducts-view">
+            <query>
+              <![CDATA[ select e from northwindsTest$AlphabeticalListOfProducts e order by function('substring', e.productname, 1, 1), e.productname]]>
+            </query>
+        </groupDatasource>
+
+
+    </dsContext>
+    <actions>
+        <action id="save"
+                caption="mainMsg://actions.Ok"
+                icon="icons/ok.png"
+                invoke="save"
+                shortcut="CTRL-ENTER"/>
+        <action id="cancel"
+                caption="mainMsg://actions.Cancel"
+                description="Esc"
+                icon="icons/cancel.png"
+                invoke="cancel"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="main">
+        <hbox id="main"
+               orientation="horizontal"
+               pos="30"
+               width="100%">
+            <vbox id="lookupBox"
+                  expand="navigationTable"
+                  height="100%"
+                  spacing="true"
+                  visible="false">
+                <groupTable id="navigationTable"
+                            height="100%"
+                            width="100%">
+                    <actions>
+                        <action id="create"/>
+                        <action id="edit"/>
+                        <action id="remove"/>
+                    </actions>
+                    <columns>
+
+                    </columns>
+                    <rows datasource="alphabeticallistofproductsDs"/>
+                    <rowsCount/>
+                    <buttonsPanel id="buttonsPanel"
+                                  alwaysVisible="true"
+                                  responsive="true">
+                        <button id="createBtn"
+                                action="navigationTable.create"/>
+                        <button id="editBtn"
+                                action="navigationTable.edit"/>
+                        <button id="removeBtn"
+                                action="navigationTable.remove"/>
+                    </buttonsPanel>
+                </groupTable>
+            </vbox>
+            <vbox id="editBox"
+                  expand="fieldGroupBox"
+                  height="100%"
+                  margin="false,false,false,true"
+                  spacing="true">
+                <vbox id="fieldGroupBox">
+	            <frame id="customFrame" 
+	                   height="100%"
+	                   screen="northwindsTest$Alphabetical_list_of_products.frame"/> 
+	                </vbox>
+	                <hbox id="actionsPane"
+	                      spacing="true"
+	                      visible="false">
+	                    <button id="saveBtn"
+	                            action="save"/>
+	                    <button id="cancelBtn"
+	                            action="cancel"/>
+	                </hbox>
+	            </vbox>
+            </hbox>
+    </layout>
+</window>

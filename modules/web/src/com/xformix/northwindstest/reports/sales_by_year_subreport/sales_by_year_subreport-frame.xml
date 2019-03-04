@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.reports.sales_by_year_subreport.Sales_by_year_subreportEdit"
+        datasource="salesbyyearDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.reports.sales_by_year_subreport">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+<grid spacing="true" height="100%" width="100%"  >
+  <columns count="1"/>
+<rows>
+<row flex="1.0">
+
+      <groupTable id="Detail"  width="100%" height="100%" x="0" y="0" >
+          <rows datasource="salesbyyearDs"/>
+          <actions>
+              <action id="create"/>
+              <action id="edit"/>
+              <action id="remove"/>
+          </actions>
+          <columns>
+          </columns>
+      </groupTable>
+</row>
+</rows></grid>
+</layout>
+</window>

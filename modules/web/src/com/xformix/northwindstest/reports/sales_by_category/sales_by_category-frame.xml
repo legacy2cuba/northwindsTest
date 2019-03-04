@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.reports.sales_by_category.Sales_by_categoryEdit"
+        datasource="salesbycategoryDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.reports.sales_by_category">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="1033.2px" height="100%"  stylename="report" >
+      <grid spacing="true" id="ReportHeader"  height="96.0px" width="1041.9199px"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+            <label  id="padding0" height="20.0px" colspan="3" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="TitleLabel" value="Sales by Category"  height="50.0px" row="0" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <label  id="padding1" height="20.0px" colspan="3" row="1" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="DateLabel" height="20.0px" width="640.0px" row="1" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="GroupHeader0"  height="518.39996px" width="1028.96px"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+            <textArea  id="CategoryName" property="categoryname"  datasource="salesbycategoryDs"  height="35.0px" width="290.0px" colspan="2" row="0" column="0"  stylename="access-textarea" />
+          </row>
+          <row>
+            <label  id="ProductLabel" value="Product:"  height="25.0px" row="1" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="CategoryID" visible="false"  property="categoryid"  datasource="salesbycategoryDs"  height="20.0px" width="160.0px" row="1" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <label  id="SalesLabel" value="Sales:"  height="25.0px" row="1" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <label  id="Line5" height="1.0px" width="370.0px" colspan="3" row="2" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+            <frame  id="Sales_by_Category_Subreport" screen="northwindsTest$Sales_by_category_subreport.frame"  height="415.0px" width="370.0px" colspan="3" row="3" column="0" />
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="false" id="Detail"  >  <columns count="1"/><rows><row></row></rows></grid>
+      <grid spacing="true" id="PageFooter"  height="19.199999px" width="1109.12px"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+          <label  id="padding2" height="20.0px" colspan="3" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          <textField  id="Text9" height="20.0px" width="640.0px" row="0" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

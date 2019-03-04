@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.reports.sales_by_year.Sales_by_yearEdit"
+        datasource="salesbyyearDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.reports.sales_by_year">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="748.8px" height="100%"  stylename="report" >
+      <grid spacing="true" id="ReportHeader"  height="86.4px" width="246.0px"  >
+        <columns count="2"/>
+        <rows>
+          <row>
+            <label  id="Title" value="Sales by Year"  height="35.0px" colspan="2" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <textField  id="DatePrinted" height="20.0px" width="240.0px" colspan="2" row="1" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="PageHeader"  height="50.399998px" width="807.6px"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+            <textField  id="Show" visible="false"  height="20.0px" width="80.0px" row="0" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <label  id="LineNumberLabel1" value="Line Number:"  height="20.0px" row="0" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="ShippedDateLabel1" value="Shipped Date:"  height="20.0px" row="0" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="OrdersShippedLabel1" value="Order ID:"  height="20.0px" row="0" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="SalesLabel1" value="Sales:"  height="20.0px" row="0" column="4"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <label  id="Line23" height="1.0px" width="740.0px" colspan="5" row="1" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="GroupHeader0"  height="126.0px" width="807.6px"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+            <frame  id="Sales_by_Year_Subreport" screen="northwindsTest$Sales_by_year_subreport.frame"  height="35.0px" width="740.0px" colspan="5" row="0" column="0" />
+          </row>
+          <row>
+            <label  id="Line10" height="1.0px" width="740.0px" colspan="5" row="1" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+            <textField  id="DetailsLabel" height="20.0px" width="240.0px" colspan="2" row="2" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="padding0" height="20.0px" row="3" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="LineNumberLabel2" value="Line Number:"  height="20.0px" row="3" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="ShippedDateLabel2" value="Shipped Date:"  height="20.0px" row="3" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="OrdersShippedLabel2" value="Order ID:"  height="20.0px" row="3" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="SalesLabel2" value="Sales:"  height="20.0px" row="3" column="4"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <label  id="padding1" height="20.0px" row="4" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Line15" height="1.0px" width="630.0px" colspan="4" row="4" column="1"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="Detail"  height="30.0px" width="748.8px"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+            <label  id="padding2" height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="LineNumber" height="20.0px" width="130.0px" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <dateField resolution="DAY"  id="ShippedDate" property="shippeddate"  datasource="salesbyyearDs"  height="20.0px" width="120.0px" row="0" column="2"   stylename="access-datefield"  align="MIDDLE_LEFT"/>
+            <textField  id="OrderID" property="orderid"  datasource="salesbyyearDs"  height="20.0px" width="140.0px" row="0" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Subtotal" property="subtotal"  datasource="salesbyyearDs"  height="20.0px" width="200.0px" row="0" column="4"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="GroupFooter1"  height="21.6px" width="748.8px"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+          <label  id="Line18" height="1.0px" width="740.0px" colspan="5" row="0" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="PageFooter"  height="32.399998px" width="469.19998px"  >
+        <columns count="3"/>
+        <rows>
+          <row>
+          <label  id="padding3" height="20.0px" colspan="2" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          <textField  id="PageNumber" height="20.0px" width="150.0px" row="0" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

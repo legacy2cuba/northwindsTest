@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu>
+    <menu icon="icons/bulk-edit.png" id="forms">
+        <item screen="northwindsTest$Employees_page_break.combo"/>
+        <item screen="northwindsTest$Suppliers.combo"/>
+        <item screen="northwindsTest$Customer_phone_list.combo"/>
+        <item screen="northwindsTest$Products.combo"/>
+        <item screen="northwindsTest$Customer_orders.combo"/>
+        <item screen="northwindsTest$Orders.combo"/>
+        <item screen="northwindsTest$Categories.combo"/>
+        <item screen="northwindsTest$Customers.combo"/>
+        <item screen="northwindsTest$Employees.combo"/>
+        <item screen="northwindsTest$Quarterly_orders.combo"/>
+    </menu>
+    <menu icon="icons/bulk-edit.png" id="reports">
+        <item screen="northwindsTest$Summary_of_sales_by_quarter.combo"/>
+        <item screen="northwindsTest$Catalog.combo"/>
+        <item screen="northwindsTest$Customer_labels.combo"/>
+        <item screen="northwindsTest$Products_by_category.combo"/>
+        <item screen="northwindsTest$Sales_by_category.combo"/>
+        <item screen="northwindsTest$Sales_by_year.combo"/>
+        <item screen="northwindsTest$Sales_totals_by_amount.combo"/>
+        <item screen="northwindsTest$Summary_of_sales_by_year.combo"/>
+        <item screen="northwindsTest$Copy_of_summary_of_sales_by_year.combo"/>
+        <item screen="northwindsTest$Employee_sales_by_country.combo"/>
+        <item screen="northwindsTest$Invoice.combo"/>
+        <item screen="northwindsTest$Alphabetical_list_of_products.combo"/>
+    </menu>
+</menu>

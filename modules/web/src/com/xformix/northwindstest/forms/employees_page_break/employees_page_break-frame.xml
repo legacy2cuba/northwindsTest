@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.forms.employees_page_break.Employees_page_breakEdit"
+        datasource="employeesDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.forms.employees_page_break">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="714.72px" height="100%" >
+      <grid spacing="true" id="FormHeader"  width="100%"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+          <label  id="padding0" height="20.0px" colspan="4" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          <textField  id="EmployeeName" height="20.0px" width="250.0px" row="0" column="4"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="Detail"  width="100%"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+              <label  id="padding1" height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="EmployeeIDLabel" value="Employee ID:"  height="20.0px" row="0" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="EmployeeID" property="id"  datasource="employeesDs"  height="20.0px" width="150.0px" row="0" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <label  id="padding2" height="20.0px" row="0" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <image scaleMode="CONTAIN"  id="Photo" property="photo"  datasource="employeesDs"  height="255.0px" width="250.0px" rowspan="7" row="0" column="4" />
+          </row>
+          <row>
+              <label  id="padding3" height="20.0px" row="1" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="FirstNameLabel" value="First Name:"  height="20.0px" row="1" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="FirstName" property="firstname"  datasource="employeesDs"  height="20.0px" width="150.0px" row="1" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="padding4" height="20.0px" row="2" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="LastNameLabel" value="Last Name:"  height="20.0px" row="2" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="LastName" property="lastname"  datasource="employeesDs"  height="20.0px" width="150.0px" row="2" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="padding5" height="20.0px" row="3" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="TitleLabel" value="Title:"  height="20.0px" row="3" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Title" property="title"  datasource="employeesDs"  height="20.0px" width="150.0px" row="3" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="padding6" height="20.0px" row="4" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="ReportsToLabel" value="Reports To:"  height="20.0px" row="4" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <lookupField   id="ReportsTo" property="reportsto"  datasource="employeesDs"  height="20.0px" width="150.0px" row="4" column="2"  align="MIDDLE_LEFT"  optionsDatasource="employeesesDs"/>
+          </row>
+          <row>
+              <label  id="padding7" height="20.0px" row="5" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="HireDateLabel" value="Hire Date:"  height="20.0px" row="5" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <dateField resolution="DAY"  id="HireDate" property="hiredate"  datasource="employeesDs"  height="20.0px" width="120.0px" row="5" column="2"   stylename="access-datefield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="padding8" height="20.0px" row="6" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="ExtensionLabel" value="Extension:"  height="20.0px" row="6" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Extension" property="extension"  datasource="employeesDs"  height="20.0px" width="150.0px" row="6" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="Line35" height="1.0px" width="420.0px" colspan="4" row="7" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+            <label  id="padding9" height="20.0px" colspan="2" row="8" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <button  id="PersonalInfo" value="Personal Info"  height="30.0px" width="150.0px" row="8" column="2"  caption="Personal Info" invoke="doActionPersonalInfo" stylename="access-button"/>
+          </row>
+          <row>
+            <label  id="PersonalInfoLabel" value="Personal Info:"  height="20.0px" row="9" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <label  id="Line36" height="1.0px" width="670.0px" colspan="5" row="10" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+              <label  id="padding10" height="20.0px" row="11" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="AddressLabel" value="Address:"  height="20.0px" row="11" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textArea  id="Address" property="address"  datasource="employeesDs"  height="35.0px" width="220.0px" colspan="2" row="11" column="2"  stylename="access-textarea" />
+          </row>
+          <row>
+              <label  id="padding11" height="20.0px" row="12" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="CityLabel" value="City:"  height="20.0px" row="12" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="City" property="city"  datasource="employeesDs"  height="20.0px" width="150.0px" row="12" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+              <label  id="RegionLabel" value="Region:"  height="20.0px" row="12" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Region" property="region"  datasource="employeesDs"  height="20.0px" width="250.0px" row="12" column="4"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="padding12" height="20.0px" row="13" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="PostalCodeLabel" value="Postal Code:"  height="20.0px" row="13" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="PostalCode" property="postalcode"  datasource="employeesDs"  height="20.0px" width="150.0px" row="13" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+              <label  id="CountryLabel" value="Country:"  height="20.0px" row="13" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Country" property="country"  datasource="employeesDs"  height="20.0px" width="250.0px" row="13" column="4"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="padding13" height="20.0px" row="14" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="HomePhoneLabel" value="Home Phone:"  height="20.0px" row="14" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="HomePhone" property="homephone"  datasource="employeesDs"  height="20.0px" width="150.0px" row="14" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+              <label  id="NotesLabel" value="Notes:"  height="20.0px" row="14" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+              <label  id="TitleOfCourtesyLabel" value="Title Of Courtesy:"  height="20.0px" colspan="2" row="15" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <lookupField   id="TitleOfCourtesy" property="titleofcourtesy"  datasource="employeesDs"  height="20.0px" width="150.0px" row="15" column="2"  align="MIDDLE_LEFT" />
+            <textArea  id="Notes" property="notes"  datasource="employeesDs"  height="65.0px" width="330.0px" rowspan="2" colspan="2" row="15" column="3"  stylename="access-textarea" />
+          </row>
+          <row>
+              <label  id="padding14" height="20.0px" row="16" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="BirthDateLabel" value="Birth Date:"  height="20.0px" row="16" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <dateField resolution="DAY"  id="BirthDate" property="birthdate"  datasource="employeesDs"  height="20.0px" width="120.0px" row="16" column="2"   stylename="access-datefield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="Line37" height="1.0px" width="670.0px" colspan="5" row="17" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+            <label  id="padding15" height="20.0px" colspan="2" row="18" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <button  id="CompanyInfo" value="Company Info"  height="30.0px" width="150.0px" row="18" column="2"  caption="Company Info" invoke="doActionCompanyInfo" stylename="access-button"/>
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

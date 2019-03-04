@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.reports.alphabetical_list_of_products.Alphabetical_list_of_productsEdit"
+        datasource="alphabeticallistofproductsDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.reports.alphabetical_list_of_products">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="748.8px" height="100%"  stylename="report" >
+      <grid spacing="true" id="ReportHeader"  height="68.4px" width="403.19998px"  >
+        <columns count="2"/>
+        <rows>
+          <row>
+            <label  id="Title" value="Alphabetical List of Products"  height="25.0px" colspan="2" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <textField  id="DatePrinted" height="20.0px" width="270.0px" row="1" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="PageHeader"  height="15.599999px" width="748.8px"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+          <label  id="Line11" height="1.0px" width="740.0px" colspan="4" row="0" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="GroupHeader0"  height="68.4px" width="758.39996px"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+            <textField  id="FirstLetterofName" height="20.0px" width="270.0px" row="0" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="ProductNameLabel" value="Product Name:"  height="20.0px" row="1" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="CategoryNameLabel" value="Category Name:"  height="20.0px" row="1" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="QuantityPerUnitLabel" value="Quantity Per Unit:"  height="20.0px" row="1" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="UnitsInStockLabel" value="Units In Stock:"  height="20.0px" row="1" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="Detail"  height="30.0px" width="771.6px"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+            <textField  id="ProductName" property="productname"  datasource="alphabeticallistofproductsDs"  height="20.0px" width="230.0px" row="0" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="CategoryName" property="categoryname"  datasource="alphabeticallistofproductsDs"  height="20.0px" width="120.0px" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="QuantityPerUnit" property="quantityperunit"  datasource="alphabeticallistofproductsDs"  height="20.0px" width="220.0px" row="0" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="UnitsInStock" property="unitsinstock"  datasource="alphabeticallistofproductsDs"  height="20.0px" width="110.0px" row="0" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="GroupFooter1"  height="20.4px" width="748.8px"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+          <label  id="Line9" height="1.0px" width="740.0px" colspan="4" row="0" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="PageFooter"  height="28.8px" width="748.8px"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+          <label  id="padding0" height="20.0px" colspan="3" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          <textField  id="PageNumber" height="20.0px" width="110.0px" row="0" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

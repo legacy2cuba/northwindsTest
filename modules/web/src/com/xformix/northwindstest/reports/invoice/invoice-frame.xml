@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.reports.invoice.InvoiceEdit"
+        datasource="invoicesDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.reports.invoice">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="749.36px" height="100%"  stylename="report" >
+      <grid spacing="true" id="PageHeader"  height="153.59999px" width="764.95996px"  >
+        <columns count="8"/>
+        <rows>
+          <row>
+            <image scaleMode="CONTAIN"  id="PictureLogo" height="100.0px" width="60.0px" rowspan="2" row="0" column="0" />
+          </row>
+          <row>
+            <image scaleMode="CONTAIN"  id="NameLogo" height="50.0px" width="240.0px" colspan="2" row="1" column="1" />
+            <label  id="InvoiceLabel" value="INVOICE"  height="35.0px" row="1" column="7"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <label  id="Line96" height="1.0px" width="740.0px" colspan="8" row="2" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+            <label  id="AddressLabel" value="One Portals Way, Twin Points WA  98156 Phone: 1-206-555-1417   Fax: 1-206-555-5938"  height="35.0px" colspan="3" row="3" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="DateLabel" value="Date:"  height="20.0px" row="3" column="6"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="DatePrinted" height="20.0px" width="90.0px" row="3" column="7"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="GroupHeader2"  height="274.8px" width="774.56px"  >
+        <columns count="8"/>
+        <rows>
+          <row>
+            <label  id="ShipToLabel" value="Ship To:"  height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="ShipName" property="shipname"  datasource="invoicesDs"  height="20.0px" width="240.0px" colspan="2" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <label  id="BillToLabel" value="Bill To:"  height="20.0px" row="0" column="4"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="CompanyName" property="companyname"  datasource="invoicesDs"  height="20.0px" width="190.0px" colspan="2" row="0" column="5"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="padding0" height="20.0px" row="1" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="ShipAddress" property="shipaddress"  datasource="invoicesDs"  height="20.0px" width="240.0px" colspan="2" row="1" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Address" property="address"  datasource="invoicesDs"  height="20.0px" width="190.0px" colspan="2" row="1" column="5"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="padding1" height="20.0px" row="2" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="ShipCityRegionPostalCode" height="20.0px" width="240.0px" colspan="2" row="2" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="CityRegionPostalCode" height="20.0px" width="190.0px" colspan="2" row="2" column="5"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="padding2" height="20.0px" row="3" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="ShipCountry" property="shipcountry"  datasource="invoicesDs"  height="20.0px" width="240.0px" colspan="2" row="3" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Country" property="country"  datasource="invoicesDs"  height="20.0px" width="190.0px" colspan="2" row="3" column="5"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="OrderIDLabel" value="Order ID:"  height="20.0px" row="4" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="CustomerIDLabel" value="Customer ID: "  height="20.0px" row="4" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="SalespersonLabel" value="Salesperson:"  height="20.0px" row="4" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="OrderDateLabel" value="Order Date:"  height="20.0px" row="4" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="RequiredDateLabel" value="Required Date:"  height="20.0px" row="4" column="4"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="ShippedDateLabel" value="Shipped Date:"  height="20.0px" row="4" column="5"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="ShipViaLabel" value="Ship Via:"  height="20.0px" colspan="2" row="4" column="6"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <textField  id="OrderID" property="orderid"  datasource="invoicesDs"  height="20.0px" width="60.0px" row="5" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="CustomerID" property="customerid"  datasource="invoicesDs"  height="20.0px" width="100.0px" row="5" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Salesperson" property="salesperson"  datasource="invoicesDs"  height="20.0px" width="130.0px" row="5" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <dateField resolution="DAY"  id="OrderDate" property="orderdate"  datasource="invoicesDs"  height="20.0px" width="120.0px" row="5" column="3"   stylename="access-datefield"  align="MIDDLE_LEFT"/>
+            <dateField resolution="DAY"  id="RequiredDate" property="requireddate"  datasource="invoicesDs"  height="20.0px" width="120.0px" row="5" column="4"   stylename="access-datefield"  align="MIDDLE_LEFT"/>
+            <dateField resolution="DAY"  id="ShippedDate" property="shippeddate"  datasource="invoicesDs"  height="20.0px" width="120.0px" row="5" column="5"   stylename="access-datefield"  align="MIDDLE_LEFT"/>
+            <textField  id="Shippers_CompanyName" property="companyname"  datasource="invoicesDs"  height="20.0px" width="140.0px" colspan="2" row="5" column="6"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="ProductIDLabel" value="Product ID:"  height="20.0px" row="6" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="ProductNameLabel" value="Product Name:"  height="20.0px" colspan="2" row="6" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="QuantityLabel" value="Quantity:"  height="20.0px" row="6" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="UnitPriceLabel" value="Unit Price:"  height="20.0px" row="6" column="4"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="DiscountLabel" value="Discount:"  height="20.0px" row="6" column="5"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="ExtendedPriceLabel" value="Extended Price:"  height="20.0px" row="6" column="6"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="Detail"  height="31.199999px" width="749.36px"  >
+        <columns count="8"/>
+        <rows>
+          <row>
+            <textField  id="ProductID" property="productid"  datasource="invoicesDs"  height="20.0px" width="60.0px" row="0" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="ProductName" property="productname"  datasource="invoicesDs"  height="20.0px" width="240.0px" colspan="2" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Quantity" property="quantity"  datasource="invoicesDs"  height="20.0px" width="80.0px" row="0" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="UnitPrice" property="unitprice"  datasource="invoicesDs"  height="20.0px" width="60.0px" row="0" column="4"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Discount" property="discount"  datasource="invoicesDs"  height="20.0px" width="90.0px" row="0" column="5"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="ExtendedPrice" property="extendedprice"  datasource="invoicesDs"  height="20.0px" width="40.0px" row="0" column="6"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="Line47" height="1.0px" width="740.0px" colspan="8" row="1" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="GroupFooter3"  height="116.399994px" width="820.16px"  >
+        <columns count="8"/>
+        <rows>
+          <row>
+              <label  id="padding3" height="20.0px" colspan="5" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="SubtotalLabel" value="Subtotal:"  height="20.0px" row="0" column="5"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="InvoiceSubtotal" height="20.0px" width="40.0px" row="0" column="6"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="padding4" height="20.0px" colspan="5" row="1" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Line41" height="1.0px" width="280.0px" colspan="3" row="1" column="5"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+              <label  id="padding5" height="20.0px" colspan="5" row="2" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="FreightLabel" value="Freight:"  height="20.0px" row="2" column="5"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Freight" property="freight"  datasource="invoicesDs"  height="20.0px" width="40.0px" row="2" column="6"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="padding6" height="20.0px" colspan="5" row="3" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Line42" height="1.0px" width="280.0px" colspan="3" row="3" column="5"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+              <label  id="padding7" height="20.0px" colspan="5" row="4" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="TotalLabel" value="Total:"  height="20.0px" row="4" column="5"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="InvoiceTotal" height="20.0px" width="40.0px" row="4" column="6"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="padding8" height="20.0px" colspan="5" row="5" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Line43" height="1.0px" width="280.0px" colspan="3" row="5" column="5"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

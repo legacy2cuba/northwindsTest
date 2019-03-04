@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.forms.employees.EmployeesEdit"
+        messagesPack="com.xformix.northwindstest.forms.employees">
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <scrollBox height="100%">
+            <vbox id="TOP_LEVEL"
+                  height="100%"
+                  width="943px">
+                <grid id="FormHeader"
+                      spacing="true"
+                      width="100%">
+                    <columns count="1"/>
+                    <rows>
+                        <row>
+                            <textField id="EmployeeName"
+                                       align="MIDDLE_LEFT"
+                                       column="0"
+                                       height="20px"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       width="690px"/>
+                        </row>
+                    </rows>
+                </grid>
+                <grid id="Detail"
+                      spacing="true"
+                      width="802px">
+                    <columns count="1"/>
+                    <rows>
+                        <row>
+                            <tabSheet id="TabCtl0"
+                                      column="0"
+                                      height="320px"
+                                      row="0">
+                                <tab id="CompanyInfo"
+                                     caption="Company Info"
+                                     margin="true,false,false,false"
+                                     spacing="true">
+                                    <grid id="grid_1"
+                                          spacing="true"
+                                          width="100%">
+                                        <columns count="3"/>
+                                        <rows>
+                                            <row>
+                                                <label id="EmployeeIDLabel"
+                                                       align="MIDDLE_RIGHT"
+                                                       column="0"
+                                                       height="20px"
+                                                       row="0"
+                                                       stylename="access-label"
+                                                       value="Employee ID:"/>
+                                                <textField id="EmployeeID"
+                                                           align="MIDDLE_LEFT"
+                                                           column="1"
+                                                           datasource="employeesDs"
+                                                           height="20px"
+                                                           property="id"
+                                                           row="0"
+                                                           stylename="access-textfield"
+                                                           width="250px"/>
+                                                <image id="Photo"
+                                                       column="2"
+                                                       datasource="employeesDs"
+                                                       height="255px"
+                                                       property="photo"
+                                                       row="0"
+                                                       rowspan="7"
+                                                       scaleMode="CONTAIN"
+                                                       width="220px"/>
+                                            </row>
+                                            <row>
+                                                <label id="FirstNameLabel"
+                                                       align="MIDDLE_RIGHT"
+                                                       column="0"
+                                                       height="20px"
+                                                       row="1"
+                                                       stylename="access-label"
+                                                       value="First Name:"/>
+                                                <textField id="FirstName"
+                                                           align="MIDDLE_LEFT"
+                                                           column="1"
+                                                           datasource="employeesDs"
+                                                           height="20px"
+                                                           property="firstname"
+                                                           row="1"
+                                                           stylename="access-textfield"
+                                                           width="250px"/>
+                                            </row>
+                                            <row>
+                                                <label id="LastNameLabel"
+                                                       align="MIDDLE_RIGHT"
+                                                       column="0"
+                                                       height="20px"
+                                                       row="2"
+                                                       stylename="access-label"
+                                                       value="Last Name:"/>
+                                                <textField id="LastName"
+                                                           align="MIDDLE_LEFT"
+                                                           column="1"
+                                                           datasource="employeesDs"
+                                                           height="20px"
+                                                           property="lastname"
+                                                           row="2"
+                                                           stylename="access-textfield"
+                                                           width="250px"/>
+                                            </row>
+                                            <row>
+                                                <label id="TitleLabel"
+                                                       align="MIDDLE_RIGHT"
+                                                       column="0"
+                                                       height="20px"
+                                                       row="3"
+                                                       stylename="access-label"
+                                                       value="Title:"/>
+                                                <textField id="Title"
+                                                           align="MIDDLE_LEFT"
+                                                           column="1"
+                                                           datasource="employeesDs"
+                                                           height="20px"
+                                                           property="title"
+                                                           row="3"
+                                                           stylename="access-textfield"
+                                                           width="250px"/>
+                                            </row>
+                                            <row>
+                                                <label id="ReportsToLabel"
+                                                       align="MIDDLE_RIGHT"
+                                                       column="0"
+                                                       height="20px"
+                                                       row="4"
+                                                       stylename="access-label"
+                                                       value="Reports To:"/>
+                                                <lookupField id="ReportsTo"
+                                                             align="MIDDLE_LEFT"
+                                                             column="1"
+                                                             datasource="employeesDs"
+                                                             height="20px"
+                                                             optionsDatasource="employeesesDs"
+                                                             property="reportsto"
+                                                             row="4"
+                                                             width="250px"/>
+                                            </row>
+                                            <row>
+                                                <label id="HireDateLabel"
+                                                       align="MIDDLE_RIGHT"
+                                                       column="0"
+                                                       height="20px"
+                                                       row="5"
+                                                       stylename="access-label"
+                                                       value="Hire Date:"/>
+                                                <dateField id="HireDate"
+                                                           align="MIDDLE_LEFT"
+                                                           column="1"
+                                                           datasource="employeesDs"
+                                                           height="20px"
+                                                           property="hiredate"
+                                                           resolution="DAY"
+                                                           row="5"
+                                                           stylename="access-datefield"
+                                                           width="120px"/>
+                                            </row>
+                                            <row>
+                                                <label id="ExtensionLabel"
+                                                       align="MIDDLE_RIGHT"
+                                                       column="0"
+                                                       height="20px"
+                                                       row="6"
+                                                       stylename="access-label"
+                                                       value="Extension:"/>
+                                                <textField id="Extension"
+                                                           align="MIDDLE_LEFT"
+                                                           column="1"
+                                                           datasource="employeesDs"
+                                                           height="20px"
+                                                           property="extension"
+                                                           row="6"
+                                                           stylename="access-textfield"
+                                                           width="250px"/>
+                                            </row>
+                                        </rows>
+                                    </grid>
+                                </tab>
+                                <tab id="PersonalInfo"
+                                     caption="Personal Info"
+                                     margin="true,false,false,false"
+                                     spacing="true">
+                                    <grid id="grid_2"
+                                          spacing="true"
+                                          width="100%">
+                                        <columns count="4"/>
+                                        <rows>
+                                            <row>
+                                                <label id="AddressLabel"
+                                                       align="MIDDLE_RIGHT"
+                                                       column="0"
+                                                       height="20px"
+                                                       row="0"
+                                                       stylename="access-label"
+                                                       value="Address:"/>
+                                                <textArea id="Address"
+                                                          colspan="2"
+                                                          column="1"
+                                                          datasource="employeesDs"
+                                                          height="35px"
+                                                          property="address"
+                                                          row="0"
+                                                          stylename="access-textarea"
+                                                          width="220px"/>
+                                            </row>
+                                            <row>
+                                                <label id="CityLabel"
+                                                       align="MIDDLE_RIGHT"
+                                                       column="0"
+                                                       height="20px"
+                                                       row="1"
+                                                       stylename="access-label"
+                                                       value="City:"/>
+                                                <textField id="City"
+                                                           align="MIDDLE_LEFT"
+                                                           column="1"
+                                                           datasource="employeesDs"
+                                                           height="20px"
+                                                           property="city"
+                                                           row="1"
+                                                           stylename="access-textfield"
+                                                           width="150px"/>
+                                                <label id="RegionLabel"
+                                                       align="MIDDLE_RIGHT"
+                                                       column="2"
+                                                       height="20px"
+                                                       row="1"
+                                                       stylename="access-label"
+                                                       value="Region:"/>
+                                                <textField id="Region"
+                                                           align="MIDDLE_LEFT"
+                                                           column="3"
+                                                           datasource="employeesDs"
+                                                           height="20px"
+                                                           property="region"
+                                                           row="1"
+                                                           stylename="access-textfield"
+                                                           width="210px"/>
+                                            </row>
+                                            <row>
+                                                <label id="PostalCodeLabel"
+                                                       align="MIDDLE_RIGHT"
+                                                       column="0"
+                                                       height="20px"
+                                                       row="2"
+                                                       stylename="access-label"
+                                                       value="Postal Code:"/>
+                                                <textField id="PostalCode"
+                                                           align="MIDDLE_LEFT"
+                                                           column="1"
+                                                           datasource="employeesDs"
+                                                           height="20px"
+                                                           property="postalcode"
+                                                           row="2"
+                                                           stylename="access-textfield"
+                                                           width="150px"/>
+                                                <label id="CountryLabel"
+                                                       align="MIDDLE_RIGHT"
+                                                       column="2"
+                                                       height="20px"
+                                                       row="2"
+                                                       stylename="access-label"
+                                                       value="Country:"/>
+                                                <textField id="Country"
+                                                           align="MIDDLE_LEFT"
+                                                           column="3"
+                                                           datasource="employeesDs"
+                                                           height="20px"
+                                                           property="country"
+                                                           row="2"
+                                                           stylename="access-textfield"
+                                                           width="210px"/>
+                                            </row>
+                                            <row>
+                                                <label id="HomePhoneLabel"
+                                                       align="MIDDLE_RIGHT"
+                                                       column="0"
+                                                       height="20px"
+                                                       row="3"
+                                                       stylename="access-label"
+                                                       value="Home Phone:"/>
+                                                <textField id="HomePhone"
+                                                           align="MIDDLE_LEFT"
+                                                           column="1"
+                                                           datasource="employeesDs"
+                                                           height="20px"
+                                                           property="homephone"
+                                                           row="3"
+                                                           stylename="access-textfield"
+                                                           width="150px"/>
+                                                <label id="NotesLabel"
+                                                       align="MIDDLE_RIGHT"
+                                                       column="2"
+                                                       height="20px"
+                                                       row="3"
+                                                       stylename="access-label"
+                                                       value="Notes:"/>
+                                            </row>
+                                            <row>
+                                                <label id="TitleOfCourtesyLabel"
+                                                       align="MIDDLE_RIGHT"
+                                                       column="0"
+                                                       height="20px"
+                                                       row="4"
+                                                       stylename="access-label"
+                                                       value="Title Of Courtesy:"/>
+                                                <lookupField id="TitleOfCourtesy"
+                                                             align="MIDDLE_LEFT"
+                                                             column="1"
+                                                             datasource="employeesDs"
+                                                             height="20px"
+                                                             property="titleofcourtesy"
+                                                             row="4"
+                                                             width="150px"/>
+                                                <textArea id="Notes"
+                                                          colspan="2"
+                                                          column="2"
+                                                          datasource="employeesDs"
+                                                          height="65px"
+                                                          property="notes"
+                                                          row="4"
+                                                          rowspan="2"
+                                                          stylename="access-textarea"
+                                                          width="280px"/>
+                                            </row>
+                                            <row>
+                                                <label id="BirthDateLabel"
+                                                       align="MIDDLE_RIGHT"
+                                                       column="0"
+                                                       height="20px"
+                                                       row="5"
+                                                       stylename="access-label"
+                                                       value="Birth Date:"/>
+                                                <dateField id="BirthDate"
+                                                           align="MIDDLE_LEFT"
+                                                           column="1"
+                                                           datasource="employeesDs"
+                                                           height="20px"
+                                                           property="birthdate"
+                                                           resolution="DAY"
+                                                           row="5"
+                                                           stylename="access-datefield"
+                                                           width="120px"/>
+                                            </row>
+                                        </rows>
+                                    </grid>
+                                </tab>
+                            </tabSheet>
+                        </row>
+                    </rows>
+                </grid>
+                <vbox expand="marvelImage"
+                      height="247px"
+                      spacing="true">
+                    <hbox spacing="true"
+                          width="288px">
+                        <label stylename="bold h3"
+                               value="Secret Identity"/>
+                        <label id="superheroLabel"
+                               stylename="h3"
+                               value="secret"/>
+                    </hbox>
+                    <image id="marvelImage"
+                           height="250px"
+                           width="370px"/>
+                </vbox>
+            </vbox>
+        </scrollBox>
+    </layout>
+</window>

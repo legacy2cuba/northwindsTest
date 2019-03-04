@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.forms.main_switchboard.Main_switchboardEdit"
+        datasource="nodatasourceDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.forms.main_switchboard">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="495.36px" height="100%" >
+      <grid spacing="true" id="Detail"  width="100%"  >
+        <columns count="3"/>
+        <rows>
+          <row>
+            <image scaleMode="CONTAIN"  id="Logo" height="180.0px" width="210.0px" rowspan="4" row="0" column="0" />
+            <label  id="Label8" value="View Product and Order Information:"  height="20.0px" colspan="2" row="0" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <button  id="Categories" value="Categories"  height="30.0px" width="100.0px" row="1" column="1"  caption="Categories" invoke="doActionCategories" stylename="access-button"/>
+            <button  id="Suppliers" value="Suppliers"  height="30.0px" width="90.0px" row="1" column="2"  caption="Suppliers" invoke="doActionSuppliers" stylename="access-button"/>
+          </row>
+          <row>
+            <button  id="Products" value="Products"  height="30.0px" width="100.0px" row="2" column="1"  caption="Products" invoke="doActionProducts" stylename="access-button"/>
+            <button  id="Orders" value="Orders"  height="30.0px" width="90.0px" row="2" column="2"  caption="Orders" invoke="doActionOrders" stylename="access-button"/>
+          </row>
+          <row>
+            <button  id="Sales_Reports_Dialog" value="Print Sales Reports"  height="30.0px" width="110.0px" row="3" column="1"  caption="Print Sales Reports" invoke="doActionSales_Reports_Dialog" stylename="access-button"/>
+          </row>
+          <row>
+            <button  id="ExitMicrosoftAccess" value="Exit Microsoft Access"  height="30.0px" width="220.0px" row="4" column="0"  caption="Exit Microsoft Access" invoke="doActionExitMicrosoftAccess" stylename="access-button"/>
+            <button  id="DisplayDatabaseWindow" value="Display Database Window"  height="30.0px" width="110.0px" row="4" column="1"  caption="Display Database Window" invoke="doActionDisplayDatabaseWindow" stylename="access-button"/>
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+
+<view class="com.xformix.northwindstest.entity.Categories" extends="_local" name="categories-view"/>
+    <view class="com.xformix.northwindstest.entity.Customers" extends="_local" name="customers-view"/>
+    <view class="com.xformix.northwindstest.entity.Employees" extends="_local" name="employees-view">
+        <property name="reportsto" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.Shippers" extends="_local" name="shippers-view"/>
+    <view class="com.xformix.northwindstest.entity.Suppliers" extends="_local" name="suppliers-view"/>
+    <view class="com.xformix.northwindstest.entity.Products" extends="_local" name="products-view">
+        <property name="supplierid" view="_local"/>
+        <property name="categoryid" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.Orders" extends="_local" name="orders-view">
+        <property name="customerid" view="_local"/>
+        <property name="employeeid" view="_local"/>
+        <property name="shipvia" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.OrderDetails" extends="_local" name="orderDetails-view">
+        <property name="orderid" view="_local"/>
+        <property name="productid" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.AlphabeticalListOfProducts" extends="_local" name="alphabeticalListOfProducts-view">
+        <property name="productid" view="_local"/>
+        <property name="supplierid" view="_local"/>
+        <property name="categoryid" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.CategorySalesFor1997" extends="_local" name="categorySalesFor1997-view"/>
+    <view class="com.xformix.northwindstest.entity.CurrentProductList" extends="_local" name="currentProductList-view">
+        <property name="productid" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.CustomersAndSuppliersByCity" extends="_local" name="customersAndSuppliersByCity-view"/>
+    <view class="com.xformix.northwindstest.entity.EmployeeSalesByCountry" extends="_local" name="employeeSalesByCountry-view">
+        <property name="orderid" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.InvoicesFilter" extends="_local" name="invoicesFilter-view">
+        <property name="customerid" view="_local"/>
+        <property name="orderid" view="_local"/>
+        <property name="productid" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.Invoices" extends="_local" name="invoices-view">
+        <property name="customerid" view="_local"/>
+        <property name="orderid" view="_local"/>
+        <property name="productid" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.OrderSubtotals" extends="_local" name="orderSubtotals-view">
+        <property name="orderid" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.OrdersQry" extends="_local" name="ordersQry-view">
+        <property name="orderid" view="_local"/>
+        <property name="customerid" view="_local"/>
+        <property name="employeeid" view="_local"/>
+        <property name="shipvia" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.OrderDetailsExtended" extends="_local" name="orderDetailsExtended-view">
+        <property name="orderid" view="_local"/>
+        <property name="productid" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.ProductsAboveAveragePrice" extends="_local" name="productsAboveAveragePrice-view"/>
+    <view class="com.xformix.northwindstest.entity.ProductsByCategory" extends="_local" name="productsByCategory-view"/>
+    <view class="com.xformix.northwindstest.entity.ProductSalesFor1997" extends="_local" name="productSalesFor1997-view"/>
+    <view class="com.xformix.northwindstest.entity.QuarterlyOrdersByProduct" extends="_local" name="quarterlyOrdersByProduct-view">
+        <property name="customerid" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.QuarterlyOrders" extends="_local" name="quarterlyOrders-view">
+        <property name="customerid" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.SalesByCategory" extends="_local" name="salesByCategory-view">
+        <property name="categoryid" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.SalesByYear" extends="_local" name="salesByYear-view">
+        <property name="orderid" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.SalesTotalsByAmount" extends="_local" name="salesTotalsByAmount-view">
+        <property name="orderid" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.SummaryOfSalesByQuarter" extends="_local" name="summaryOfSalesByQuarter-view">
+        <property name="orderid" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.SummaryOfSalesByYear" extends="_local" name="summaryOfSalesByYear-view">
+        <property name="orderid" view="_local"/>
+    </view>
+    <view class="com.xformix.northwindstest.entity.TenMostExpensiveProducts" extends="_local" name="tenMostExpensiveProducts-view"/>
+</views>

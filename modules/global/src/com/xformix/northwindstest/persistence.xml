@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="northwindsTest" transaction-type="RESOURCE_LOCAL">
+
+    <class>com.xformix.northwindstest.entity.Categories</class>
+        <class>com.xformix.northwindstest.entity.Customers</class>
+        <class>com.xformix.northwindstest.entity.Employees</class>
+        <class>com.xformix.northwindstest.entity.Shippers</class>
+        <class>com.xformix.northwindstest.entity.Suppliers</class>
+        <class>com.xformix.northwindstest.entity.Products</class>
+        <class>com.xformix.northwindstest.entity.Orders</class>
+        <class>com.xformix.northwindstest.entity.OrderDetails</class>
+        <class>com.xformix.northwindstest.entity.AlphabeticalListOfProducts</class>
+        <class>com.xformix.northwindstest.entity.CategorySalesFor1997</class>
+        <class>com.xformix.northwindstest.entity.CurrentProductList</class>
+        <class>com.xformix.northwindstest.entity.CustomersAndSuppliersByCity</class>
+        <class>com.xformix.northwindstest.entity.EmployeeSalesByCountry</class>
+        <class>com.xformix.northwindstest.entity.InvoicesFilter</class>
+        <class>com.xformix.northwindstest.entity.Invoices</class>
+        <class>com.xformix.northwindstest.entity.OrderSubtotals</class>
+        <class>com.xformix.northwindstest.entity.OrdersQry</class>
+        <class>com.xformix.northwindstest.entity.OrderDetailsExtended</class>
+        <class>com.xformix.northwindstest.entity.ProductsAboveAveragePrice</class>
+        <class>com.xformix.northwindstest.entity.ProductsByCategory</class>
+        <class>com.xformix.northwindstest.entity.ProductSalesFor1997</class>
+        <class>com.xformix.northwindstest.entity.QuarterlyOrdersByProduct</class>
+        <class>com.xformix.northwindstest.entity.QuarterlyOrders</class>
+        <class>com.xformix.northwindstest.entity.SalesByCategory</class>
+        <class>com.xformix.northwindstest.entity.SalesByYear</class>
+        <class>com.xformix.northwindstest.entity.SalesTotalsByAmount</class>
+        <class>com.xformix.northwindstest.entity.SummaryOfSalesByQuarter</class>
+        <class>com.xformix.northwindstest.entity.SummaryOfSalesByYear</class>
+        <class>com.xformix.northwindstest.entity.TenMostExpensiveProducts</class>
+    </persistence-unit>
+</persistence>

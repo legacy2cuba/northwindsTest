@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.forms.quarterly_orders.Quarterly_ordersEdit"
+        datasource="quarterlyordersDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.forms.quarterly_orders">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="732.0px" height="100%" >
+      <grid spacing="true" id="Detail"  width="100%"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+              <label  id="CustomerIDLabel" value="Customer ID"  height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="CustomerID" property="customerid"  datasource="quarterlyordersDs"  height="20.0px" width="90.0px" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+              <label  id="padding0" height="20.0px" row="0" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="CityLabel" value="City"  height="20.0px" row="0" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="City" property="city"  datasource="quarterlyordersDs"  height="20.0px" width="210.0px" row="0" column="4"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="CompanyNameLabel" value="Company Name"  height="20.0px" row="1" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="CompanyName" property="companyname"  datasource="quarterlyordersDs"  height="20.0px" width="270.0px" colspan="2" row="1" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+              <label  id="CountryLabel" value="Country"  height="20.0px" row="1" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Country" property="country"  datasource="quarterlyordersDs"  height="20.0px" width="210.0px" row="1" column="4"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <frame  id="Quarterly_Orders_Subform" screen="northwindsTest$Quarterly_orders_subform.frame"  height="190.0px" width="720.0px" colspan="5" row="2" column="0" />
+          </row>
+          <row>
+            <textField  id="GrandTotalLabel" height="20.0px" width="240.0px" colspan="2" row="3" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="GrandTotal" height="20.0px" width="180.0px" row="3" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

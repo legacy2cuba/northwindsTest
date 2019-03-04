@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.forms.sales_reports_dialog.Sales_reports_dialogEdit"
+        datasource="nodatasourceDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.forms.sales_reports_dialog">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="428.4px" height="100%" >
+      <grid spacing="true" id="Detail"  width="100%"  >
+        <columns count="2"/>
+        <rows>
+          <row>
+            <groupBox  rowspan="4" height="100%" width="100%"  row="0" column="0"  caption="Report to Print" >
+          <grid spacing="true" id="ReportToPrint"  width="100%"  >
+            <columns count="2"/>
+            <rows>
+              <row>
+                <button  id="EmployeeSalesByCountry" height="20.0px" width="20.0px" row="1" column="0"  caption="null" invoke="doActionEmployeeSalesByCountry" stylename="access-button"/>
+                  <label  id="EmployeeSalesByCountryLabel" value="Employee Sales by Country"  height="20.0px" row="1" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              </row>
+              <row>
+                <button  id="SalesSummaries" height="20.0px" width="20.0px" row="2" column="0"  caption="null" invoke="doActionSalesSummaries" stylename="access-button"/>
+                  <label  id="SalesTotalsByAmountLabel" value="Sales Totals by Amount"  height="20.0px" row="2" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              </row>
+              <row>
+                <button  id="SalesByCategory" height="20.0px" width="20.0px" row="3" column="0"  caption="null" invoke="doActionSalesByCategory" stylename="access-button"/>
+                  <label  id="SalesByCategoryLabel" value="Sales by Category"  height="20.0px" row="3" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              </row>
+            </rows>
+          </grid>
+            </groupBox>
+            <button  id="Preview" value="Preview"  height="20.0px" width="90.0px" row="0" column="1"  caption="Preview" invoke="doActionPreview" stylename="access-button"/>
+          </row>
+          <row>
+            <button  id="Print" value="Print"  height="20.0px" width="90.0px" row="1" column="1"  caption="Print" invoke="doActionPrint" stylename="access-button"/>
+          </row>
+          <row>
+              <label  id="InstructionsLabel" value="To print only one category's sales, select a category in the list. To print all categories, make no selection."  height="50.0px" row="2" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <button  id="Cancel" value="Cancel"  height="20.0px" width="90.0px" row="2" column="1"  caption="Cancel" invoke="doActionCancel" stylename="access-button"/>
+          </row>
+          <row>
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

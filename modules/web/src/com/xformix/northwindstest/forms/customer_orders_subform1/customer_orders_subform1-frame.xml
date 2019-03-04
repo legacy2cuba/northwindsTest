@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.forms.customer_orders_subform1.Customer_orders_subform1Edit"
+        datasource="ordersDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.forms.customer_orders_subform1">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+<grid spacing="true" height="100%" width="100%"  >
+  <columns count="1"/>
+<rows>
+<row flex="1.0">
+
+      <groupTable id="Detail"  width="100%" height="100%" x="0" y="0" >
+          <rows datasource="ordersDs"/>
+          <actions>
+              <action id="create"/>
+              <action id="edit"/>
+              <action id="remove"/>
+          </actions>
+          <columns>
+              <column id="id" caption="id" property="id"/>
+              <column id="requireddate" caption="requireddate" property="requireddate"/>
+              <column id="orderdate" caption="orderdate" property="orderdate"/>
+              <column id="shippeddate" caption="shippeddate" property="shippeddate"/>
+          </columns>
+      </groupTable>
+</row>
+</rows></grid>
+</layout>
+</window>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.forms.customer_orders.Customer_ordersEdit"
+        datasource="customersDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.forms.customer_orders">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="691.2px" height="100%" >
+      <grid spacing="true" id="Detail"  width="100%"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+              <label  id="CompanyName_Label" value="Company Name"  height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="CompanyName" property="companyname"  datasource="customersDs"  height="20.0px" width="330.0px" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+              <label  id="Country_Label" value="Country"  height="20.0px" row="0" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Country" property="country"  datasource="customersDs"  height="20.0px" width="140.0px" row="0" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="Line8" height="1.0px" width="680.0px" colspan="4" row="1" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+              <label  id="Customer_Orders_Subform1_Label" value="Click an order..."  height="20.0px" row="2" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <frame  id="Customer_Orders_Subform1" screen="northwindsTest$Customer_orders_subform1.frame"  height="130.0px" width="680.0px" colspan="4" row="3" column="0" />
+          </row>
+          <row>
+              <label  id="Customer_Orders_Subform2_Label" value="...to see order details. "  height="20.0px" row="4" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <frame  id="Customer_Orders_Subform2" screen="northwindsTest$Customer_orders_subform2.frame"  height="110.0px" width="680.0px" colspan="4" row="5" column="0" />
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

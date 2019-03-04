@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.forms.suppliers.SuppliersEdit"
+        datasource="suppliersDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.forms.suppliers">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="691.2px" height="100%" >
+      <grid spacing="true" id="Detail"  width="100%"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+              <label  id="SupplierIDLabel" value="Supplier ID:"  height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="SupplierID" property="id"  datasource="suppliersDs"  height="20.0px" width="170.0px" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="CompanyNameLabel" value="Company Name:"  height="20.0px" row="1" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="CompanyName" property="companyname"  datasource="suppliersDs"  height="20.0px" width="250.0px" colspan="2" row="1" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="ContactNameLabel" value="Contact Name:"  height="20.0px" row="2" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="ContactName" property="contactname"  datasource="suppliersDs"  height="20.0px" width="170.0px" row="2" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+              <label  id="TitleLabel" value="Title:"  height="20.0px" row="2" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="ContactTitle" property="contacttitle"  datasource="suppliersDs"  height="20.0px" width="200.0px" row="2" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="AddressLabel" value="Address:"  height="20.0px" row="3" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textArea  id="Address" property="address"  datasource="suppliersDs"  height="35.0px" width="250.0px" colspan="2" row="3" column="1"  stylename="access-textarea" />
+          </row>
+          <row>
+              <label  id="CityLabel" value="City:"  height="20.0px" row="4" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="City" property="city"  datasource="suppliersDs"  height="20.0px" width="170.0px" row="4" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+              <label  id="RegionLabel" value="Region:"  height="20.0px" row="4" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Region" property="region"  datasource="suppliersDs"  height="20.0px" width="200.0px" row="4" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="PostalCodeLabel" value="Postal Code:"  height="20.0px" row="5" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="PostalCode" property="postalcode"  datasource="suppliersDs"  height="20.0px" width="170.0px" row="5" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+              <label  id="CountryLabel" value="Country:"  height="20.0px" row="5" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Country" property="country"  datasource="suppliersDs"  height="20.0px" width="200.0px" row="5" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="PhoneLabel" value="Phone:"  height="20.0px" row="6" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Phone" property="phone"  datasource="suppliersDs"  height="20.0px" width="170.0px" row="6" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+              <label  id="FaxLabel" value="Fax:"  height="20.0px" row="6" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Fax" property="fax"  datasource="suppliersDs"  height="20.0px" width="200.0px" row="6" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="Label23" value="Home Page:"  height="20.0px" row="7" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="HomePage" property="homepage"  datasource="suppliersDs"  height="20.0px" width="460.0px" colspan="3" row="7" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="FormFooter"  width="100%"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+            <button  id="ReviewProducts" value="Review Products"  height="25.0px" width="190.0px" row="0" column="0"  caption="Review Products" invoke="doActionReviewProducts" stylename="access-button"/>
+            <label  id="padding0" height="20.0px" row="0" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <button  id="AddProducts" value="Add Products"  height="25.0px" width="280.0px" colspan="2" row="0" column="2"  caption="Add Products" invoke="doActionAddProducts" stylename="access-button"/>
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

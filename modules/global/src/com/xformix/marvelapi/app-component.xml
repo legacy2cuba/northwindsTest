@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<app-component xmlns="http://schemas.haulmont.com/cuba/app-component.xsd"
+               dependsOn="com.xformix.apitools, com.haulmont.cuba">
+    <module blocks="*"
+            name="global">
+        <artifact appJar="true"
+                  name="marvelApi-global"/>
+        <property name="cuba.persistenceConfig"
+                  value="+com/xformix/marvelapi/persistence.xml"/>
+        <property name="cuba.metadataConfig"
+                  value="+com/xformix/marvelapi/metadata.xml"/>
+        <property name="cuba.viewsConfig"
+                  value="+com/xformix/marvelapi/views.xml"/>
+    </module>
+    <module blocks="core"
+            dependsOn="global"
+            name="core">
+        <artifact appJar="true"
+                  name="marvelApi-core"/>
+        <property name="cuba.springContextConfig"
+                  value="+com/xformix/marvelapi/spring.xml"/>
+        <property name="cuba.mainMessagePack"
+                  value="+com.xformix.marvelapi.core"/>
+    </module>
+    <module blocks="web"
+            dependsOn="global"
+            name="web">
+        <artifact appJar="true"
+                  name="marvelApi-web"/>
+        <artifact classifier="web"
+                  configuration="webcontent"
+                  ext="zip"
+                  name="marvelApi-web"/>
+        <property name="cuba.springContextConfig"
+                  value="+com/xformix/marvelapi/web-spring.xml"/>
+        <property name="cuba.dispatcherSpringContextConfig"
+                  value="+com/xformix/marvelapi/web-dispatcher-spring.xml"/>
+        <property name="cuba.windowConfig"
+                  value="+com/xformix/marvelapi/web-screens.xml"/>
+        <property name="cuba.menuConfig"
+                  value="+com/xformix/marvelapi/web-menu.xml"/>
+        <property name="cuba.permissionConfig"
+                  value="+com/xformix/marvelapi/web-permissions.xml"/>
+        <property name="cuba.mainMessagePack"
+                  value="+com.xformix.marvelapi.web"/>
+    </module>
+</app-component>

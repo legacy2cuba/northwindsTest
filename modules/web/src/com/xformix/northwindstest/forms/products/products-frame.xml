@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.forms.products.ProductsEdit"
+        datasource="productsDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.forms.products">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="632.39996px" height="100%" >
+      <grid spacing="true" id="FormHeader"  width="100%"  >
+        <columns count="3"/>
+        <rows>
+          <row>
+            <label  id="padding0" height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <button  id="PreviewReport" value="Preview product list"  height="20.0px" width="240.0px" colspan="2" row="0" column="1"  caption="Preview product list" invoke="doActionPreviewReport" stylename="access-button"/>
+          </row>
+          <row>
+            <label  id="TitleLabel" value="Products"  height="30.0px" row="1" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <button  id="OutputToHTML" value="Output product list as HTML"  height="20.0px" width="240.0px" colspan="2" row="1" column="1"  caption="Output product list as HTML" invoke="doActionOutputToHTML" stylename="access-button"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="Detail"  width="100%"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+              <label  id="ProductIDLabel" value="Product ID:"  height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="ProductID" property="id"  datasource="productsDs"  height="20.0px" width="120.0px" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="ProductNameLabel" value="Product Name:"  height="20.0px" row="1" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="ProductName" property="productname"  datasource="productsDs"  height="20.0px" width="240.0px" colspan="2" row="1" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="SupplierLabel" value="Supplier:"  height="20.0px" row="2" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <lookupField   id="SupplierID" property="supplierid"  datasource="productsDs"  height="20.0px" width="240.0px" colspan="2" row="2" column="1"  align="MIDDLE_LEFT"  optionsDatasource="suppliersesDs"/>
+          </row>
+          <row>
+              <label  id="CategoryLabel" value="Category:"  height="20.0px" row="3" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <lookupField   id="CategoryID" property="categoryid"  datasource="productsDs"  height="20.0px" width="120.0px" row="3" column="1"  align="MIDDLE_LEFT"  optionsDatasource="categoriesesDs"/>
+          </row>
+          <row>
+              <label  id="QuantityPerUnitLabel" value="Quantity Per Unit:"  height="20.0px" row="4" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="QuantityPerUnit" property="quantityperunit"  datasource="productsDs"  height="20.0px" width="240.0px" colspan="2" row="4" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="UnitPriceLabel" value="Unit Price:"  height="20.0px" row="5" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="UnitPrice" property="unitprice"  datasource="productsDs"  height="20.0px" width="120.0px" row="5" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="UnitsInStockLabel" value="Units In Stock:"  height="20.0px" row="6" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="UnitsInStock" property="unitsinstock"  datasource="productsDs"  height="20.0px" width="120.0px" row="6" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="UnitsOnOrderLabel" value="Units On Order:"  height="20.0px" row="7" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="UnitsOnOrder" property="unitsonorder"  datasource="productsDs"  height="20.0px" width="120.0px" row="7" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="ReorderLevelLabel" value="Reorder Level:"  height="20.0px" row="8" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="ReorderLevel" property="reorderlevel"  datasource="productsDs"  height="20.0px" width="120.0px" row="8" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+              <label  id="DiscontinuedLabel" value="Discontinued:"  height="20.0px" row="8" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <checkBox  id="Discontinued" property="discontinued"  datasource="productsDs"  height="20.0px" width="80.0px" row="8" column="3" />
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

@@ -1,0 +1,24 @@
+/* Define your theme modifications inside next mixin */
+@mixin com_xformix_northwindstest-halo-ext {
+
+//deploy with deployThemes task
+
+.v-textfield {
+//background-color : red !important;
+border : 0px !important; 
+}
+
+.report-line1 {
+    background-color : black;
+    height : 1px;
+    width : 100%;
+}
+.report-line {
+    border-top : 1px solid black;
+    height : 24px;
+    width : 100%;
+}
+.v-grid-cell, .v-grid-column-header-content{
+  text-align: right;
+}
+}

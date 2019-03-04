@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.forms.orders_subform.Orders_subformEdit"
+        datasource="orderdetailsextendedDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.forms.orders_subform">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+<grid spacing="true" height="100%" width="100%"  >
+  <columns count="1"/>
+<rows>
+<row>
+</row>
+<row flex="1.0">
+
+      <groupTable id="Detail"  width="100%" height="100%" x="0" y="0" >
+          <rows datasource="orderdetailsextendedDs"/>
+          <actions>
+              <action id="create"/>
+              <action id="edit"/>
+              <action id="remove"/>
+          </actions>
+          <columns>
+              <column id="productid" caption="productid" property="productid"/>
+              <column id="unitprice" caption="unitprice" property="unitprice"/>
+              <column id="quantity" caption="quantity" property="quantity"/>
+              <column id="discount" caption="discount" property="discount"/>
+              <column id="extendedprice" caption="extendedprice" property="extendedprice"/>
+          </columns>
+      </groupTable>
+</row>
+<row>
+      <grid spacing="true" id="FormFooter"  width="100%"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+            <label  id="padding0" height="20.0px" colspan="3" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="OrderSubtotal_Label" value="Order Subtotal:"  height="20.0px" row="0" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          <textField  id="OrderSubtotal" height="20.0px" width="100.0px" row="0" column="4"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+</row>
+</rows></grid>
+</layout>
+</window>

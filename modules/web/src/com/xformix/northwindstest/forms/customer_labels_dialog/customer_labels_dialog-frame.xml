@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.forms.customer_labels_dialog.Customer_labels_dialogEdit"
+        datasource="nodatasourceDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.forms.customer_labels_dialog">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="391.68px" height="100%" >
+      <grid spacing="true" id="Detail"  width="100%"  >
+        <columns count="2"/>
+        <rows>
+          <row>
+            <groupBox  width="100%"  row="0" column="0"  caption="Print Labels For:" >
+          <grid spacing="true" id="PrintLabelsFor"  width="100%"  >
+            <columns count="2"/>
+            <rows>
+              <row>
+                <button  id="AllCountries" height="20.0px" width="10.0px" row="1" column="0"  caption="null" invoke="doActionAllCountries" stylename="access-button"/>
+                  <label  id="AllCountriesLabel" value="All Countries"  height="20.0px" row="1" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              </row>
+              <row>
+                <button  id="SpecificCountry" height="20.0px" width="10.0px" row="2" column="0"  caption="null" invoke="doActionSpecificCountry" stylename="access-button"/>
+                  <label  id="SpecificCountryLabel" value="Specific Country"  height="20.0px" row="2" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              </row>
+            </rows>
+          </grid>
+            </groupBox>
+            <button  id="Preview" value="Preview"  height="20.0px" width="90.0px" row="0" column="1"  caption="Preview" invoke="doActionPreview" stylename="access-button"/>
+          </row>
+          <row>
+            <label  id="padding0" height="20.0px" row="1" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <button  id="Print" value="Print"  height="20.0px" width="90.0px" row="1" column="1"  caption="Print" invoke="doActionPrint" stylename="access-button"/>
+          </row>
+          <row>
+            <lookupField   id="SelectCountry" height="20.0px" width="210.0px" row="2" column="0"  align="MIDDLE_LEFT"  optionsDatasource="selectcountrysesDs"/>
+            <button  id="Cancel" value="Cancel"  height="20.0px" width="90.0px" row="2" column="1"  caption="Cancel" invoke="doActionCancel" stylename="access-button"/>
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

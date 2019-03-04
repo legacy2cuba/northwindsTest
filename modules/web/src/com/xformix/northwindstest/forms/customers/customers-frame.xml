@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.forms.customers.CustomersEdit"
+        messagesPack="com.xformix.northwindstest.forms.customers">
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <scrollBox height="100%">
+            <flowBox expand="TOP_LEVEL"
+                     height="100%">
+                <vbox id="TOP_LEVEL"
+                      height="100%"
+                      width="645px">
+                    <grid id="FormHeader"
+                          spacing="true"
+                          width="100%">
+                        <columns count="1"/>
+                        <rows>
+                            <row>
+                                <label id="CustomersLabel"
+                                       align="MIDDLE_RIGHT"
+                                       column="0"
+                                       height="30px"
+                                       row="0"
+                                       stylename="access-label"
+                                       value="Customers"/>
+                            </row>
+                        </rows>
+                    </grid>
+                    <grid id="Detail"
+                          spacing="true"
+                          width="100%">
+                        <columns count="4"/>
+                        <rows>
+                            <row>
+                                <label id="CustomerIDLabel"
+                                       align="MIDDLE_RIGHT"
+                                       column="0"
+                                       height="20px"
+                                       row="0"
+                                       stylename="access-label"
+                                       value="Customer ID:"/>
+                                <textField id="CustomerID"
+                                           align="MIDDLE_LEFT"
+                                           column="1"
+                                           datasource="customersDs"
+                                           height="20px"
+                                           property="customerid"
+                                           row="0"
+                                           stylename="access-textfield"
+                                           width="160px"/>
+                            </row>
+                            <row>
+                                <label id="CompanyNameLabel"
+                                       align="MIDDLE_RIGHT"
+                                       column="0"
+                                       height="20px"
+                                       row="1"
+                                       stylename="access-label"
+                                       value="Company Name:"/>
+                                <textField id="CompanyName"
+                                           align="MIDDLE_LEFT"
+                                           colspan="2"
+                                           column="1"
+                                           datasource="customersDs"
+                                           height="20px"
+                                           property="companyname"
+                                           row="1"
+                                           stylename="access-textfield"
+                                           width="240px"/>
+                            </row>
+                            <row>
+                                <label id="ContactNameLabel"
+                                       align="MIDDLE_RIGHT"
+                                       column="0"
+                                       height="20px"
+                                       row="2"
+                                       stylename="access-label"
+                                       value="Contact Name:"/>
+                                <textField id="ContactName"
+                                           align="MIDDLE_LEFT"
+                                           column="1"
+                                           datasource="customersDs"
+                                           height="20px"
+                                           property="contactname"
+                                           row="2"
+                                           stylename="access-textfield"
+                                           width="160px"/>
+                                <label id="TitleLabel"
+                                       align="MIDDLE_RIGHT"
+                                       column="2"
+                                       height="20px"
+                                       row="2"
+                                       stylename="access-label"
+                                       value="Title:"/>
+                                <textField id="ContactTitle"
+                                           align="MIDDLE_LEFT"
+                                           column="3"
+                                           datasource="customersDs"
+                                           height="20px"
+                                           property="contacttitle"
+                                           row="2"
+                                           stylename="access-textfield"
+                                           width="150px"/>
+                            </row>
+                            <row>
+                                <label id="AddressLabel"
+                                       align="MIDDLE_RIGHT"
+                                       column="0"
+                                       height="20px"
+                                       row="3"
+                                       stylename="access-label"
+                                       value="Address:"/>
+                                <textArea id="Address"
+                                          column="1"
+                                          datasource="customersDs"
+                                          height="35px"
+                                          property="address"
+                                          row="3"
+                                          stylename="access-textarea"
+                                          width="160px"/>
+                            </row>
+                            <row>
+                                <label id="CityLabel"
+                                       align="MIDDLE_RIGHT"
+                                       column="0"
+                                       height="20px"
+                                       row="4"
+                                       stylename="access-label"
+                                       value="City:"/>
+                                <textField id="City"
+                                           align="MIDDLE_LEFT"
+                                           column="1"
+                                           datasource="customersDs"
+                                           height="20px"
+                                           property="city"
+                                           row="4"
+                                           stylename="access-textfield"
+                                           width="160px"/>
+                                <label id="RegionLabel"
+                                       align="MIDDLE_RIGHT"
+                                       column="2"
+                                       height="20px"
+                                       row="4"
+                                       stylename="access-label"
+                                       value="Region:"/>
+                                <textField id="Region"
+                                           align="MIDDLE_LEFT"
+                                           column="3"
+                                           datasource="customersDs"
+                                           height="20px"
+                                           property="region"
+                                           row="4"
+                                           stylename="access-textfield"
+                                           width="150px"/>
+                            </row>
+                            <row>
+                                <label id="PostalCodeLabel"
+                                       align="MIDDLE_RIGHT"
+                                       column="0"
+                                       height="20px"
+                                       row="5"
+                                       stylename="access-label"
+                                       value="Postal Code:"/>
+                                <textField id="PostalCode"
+                                           align="MIDDLE_LEFT"
+                                           column="1"
+                                           datasource="customersDs"
+                                           height="20px"
+                                           property="postalcode"
+                                           row="5"
+                                           stylename="access-textfield"
+                                           width="160px"/>
+                                <label id="CountryLabel"
+                                       align="MIDDLE_RIGHT"
+                                       column="2"
+                                       height="20px"
+                                       row="5"
+                                       stylename="access-label"
+                                       value="Country:"/>
+                                <lookupField id="Country"
+                                             align="MIDDLE_LEFT"
+                                             column="3"
+                                             datasource="customersDs"
+                                             height="20px"
+                                             property="country"
+                                             row="5"
+                                             width="150px"/>
+                            </row>
+                            <row>
+                                <label id="PhoneLabel"
+                                       align="MIDDLE_RIGHT"
+                                       column="0"
+                                       height="20px"
+                                       row="6"
+                                       stylename="access-label"
+                                       value="Phone:"/>
+                                <textField id="Phone"
+                                           align="MIDDLE_LEFT"
+                                           column="1"
+                                           datasource="customersDs"
+                                           height="20px"
+                                           property="phone"
+                                           row="6"
+                                           stylename="access-textfield"
+                                           width="160px"/>
+                                <label id="FaxLabel"
+                                       align="MIDDLE_RIGHT"
+                                       column="2"
+                                       height="20px"
+                                       row="6"
+                                       stylename="access-label"
+                                       value="Fax:"/>
+                                <textField id="Fax"
+                                           align="MIDDLE_LEFT"
+                                           column="3"
+                                           datasource="customersDs"
+                                           height="20px"
+                                           property="fax"
+                                           row="6"
+                                           stylename="access-textfield"
+                                           width="150px"/>
+                            </row>
+                        </rows>
+                    </grid>
+                </vbox>
+                <vbox id="mapBox"
+                      height="400px"
+                      spacing="true"
+                      width="400px"/>
+            </flowBox>
+        </scrollBox>
+    </layout>
+</window>

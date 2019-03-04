@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.reports.employee_sales_by_country.Employee_sales_by_countryEdit"
+        datasource="employeesalesbycountryDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.reports.employee_sales_by_country">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="748.8px" height="100%"  stylename="report" >
+      <grid spacing="true" id="ReportHeader"  height="104.399994px" width="383.03998px"  >
+        <columns count="3"/>
+        <rows>
+          <row>
+            <label  id="ReportTitle" value="Employee Sales by Country"  height="35.0px" colspan="3" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <textField  id="Range" height="20.0px" width="380.0px" colspan="3" row="1" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="GroupHeader0"  height="48.0px" width="747.68px"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+              <label  id="CountryLabel" value="Country:"  height="25.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Country" property="country"  datasource="employeesalesbycountryDs"  height="25.0px" width="300.0px" colspan="2" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="Line32" height="1.0px" width="740.0px" colspan="5" row="1" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="GroupHeader2"  height="106.799995px" width="813.68px"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+              <label  id="SalespersonLabel" value="Salesperson:"  height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Salesperson" height="20.0px" width="250.0px" colspan="2" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <label  id="ExceededGoalLabel" value="Exceeded Goal!"  height="20.0px" row="0" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <label  id="SalespersonLine" height="1.0px" width="560.0px" colspan="4" row="1" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+            <label  id="padding0" height="20.0px" colspan="3" row="2" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="PercentOfSalespersonTotalLabel" value="Percent of Salesperson's Total:"  height="40.0px" rowspan="2" row="2" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="PercentOfCountryTotalLabel" value="Percent of  Country Total:"  height="40.0px" rowspan="2" row="2" column="4"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <label  id="padding1" height="20.0px" row="3" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="OrderIDLabel" value="Order ID:"  height="20.0px" row="3" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="SalesAmountLabel" value="Sale Amount:"  height="20.0px" row="3" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <label  id="padding2" height="20.0px" row="4" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Line37" height="1.0px" width="660.0px" colspan="4" row="4" column="1"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="Detail"  height="31.199999px" width="757.04px"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+            <label  id="padding3" height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="OrderID" property="orderid"  datasource="employeesalesbycountryDs"  height="20.0px" width="100.0px" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="SaleAmount" property="saleamount"  datasource="employeesalesbycountryDs"  height="20.0px" width="150.0px" row="0" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="PercentOfSalespersonTotal" height="20.0px" width="140.0px" row="0" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="PercentOfCountryTotal" height="20.0px" width="180.0px" row="0" column="4"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="GroupFooter3"  height="64.799995px" width="781.27997px"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+            <label  id="padding4" height="20.0px" colspan="2" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Line33" height="1.0px" width="150.0px" row="0" column="2"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+            <label  id="Line34" height="1.0px" width="180.0px" row="0" column="4"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+            <textField  id="EmployeeTotalCaption" height="20.0px" width="220.0px" colspan="2" row="1" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="SalespersonTotal" height="20.0px" width="150.0px" row="1" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="PercentOfCountryTotal2" height="20.0px" width="180.0px" row="1" column="4"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="Line30" height="1.0px" width="740.0px" colspan="5" row="2" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="GroupFooter1"  height="72.0px" width="747.68px"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+            <textField  id="CountryTotalCaption" height="20.0px" width="230.0px" colspan="2" row="0" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="CountryTotal" height="20.0px" width="150.0px" row="0" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <textField  id="PercentOfGrandTotalLabel" height="20.0px" width="220.0px" colspan="2" row="1" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="PercentOfGrandTotal" height="20.0px" width="150.0px" row="1" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="Line31" height="1.0px" width="740.0px" colspan="5" row="2" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="PageFooter"  height="32.399998px" width="857.83997px"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+              <label  id="PrintedLabel" value="Printed: "  height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="DatePrinted" height="20.0px" width="140.0px" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <label  id="padding5" height="20.0px" row="0" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="PageNumber" height="20.0px" width="360.0px" colspan="2" row="0" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="ReportFooter"  height="54.0px" width="383.03998px"  >
+        <columns count="3"/>
+        <rows>
+          <row>
+              <label  id="GrandTotalLabel" value="Grand Total:"  height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="padding6" height="20.0px" row="0" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="GrandTotal" height="20.0px" width="150.0px" row="0" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="padding7" height="20.0px" colspan="2" row="1" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Line41" height="1.0px" width="150.0px" row="1" column="2"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.forms.customer_phone_list.Customer_phone_listEdit"
+        datasource="customersDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.forms.customer_phone_list">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+  
+      <groupTable id="Detail"  width="100%" height="100%" x="0" y="0" >
+          <rows datasource="customersDs"/>
+          <actions>
+              <action id="create"/>
+              <action id="edit"/>
+              <action id="remove"/>
+          </actions>
+          <columns>
+              <column id="companyname" caption="Contact:" property="companyname"/>
+              <column id="contactname" caption="Company Name:" property="contactname"/>
+              <column id="phone" caption="Phone:" property="phone"/>
+              <column id="fax" caption="Fax:" property="fax"/>
+          </columns>
+      </groupTable>
+
+</layout>
+</window>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.forms.orders.OrdersEdit"
+        datasource="ordersqryDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.forms.orders">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="712.8px" height="100%" >
+      <grid spacing="true" id="Detail"  width="100%"  >
+        <columns count="8"/>
+        <rows>
+          <row>
+              <label  id="BillTo_Label" value="Bill To:"  height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <lookupField   id="CustomerID" property="customerid"  datasource="ordersqryDs"  height="20.0px" width="250.0px" colspan="3" row="0" column="1"  align="MIDDLE_LEFT"  optionsDatasource="customersesDs"/>
+              <label  id="ShipTo_Label" value="Ship To:"  height="20.0px" row="0" column="4"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="ShipName" property="shipname"  datasource="ordersqryDs"  height="20.0px" width="270.0px" colspan="3" row="0" column="5"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="padding0" height="20.0px" row="1" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textArea  id="Address" property="address"  datasource="ordersqryDs"  height="30.0px" width="250.0px" colspan="3" row="1" column="1"  stylename="access-textarea" />
+            <textArea  id="ShipAddress" property="shipaddress"  datasource="ordersqryDs"  height="30.0px" width="270.0px" colspan="3" row="1" column="5"  stylename="access-textarea" />
+          </row>
+          <row>
+            <label  id="padding1" height="20.0px" row="2" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="City" property="city"  datasource="ordersqryDs"  height="20.0px" width="90.0px" row="2" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Region" property="region"  datasource="ordersqryDs"  height="20.0px" width="70.0px" row="2" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="PostalCode" property="postalcode"  datasource="ordersqryDs"  height="20.0px" width="80.0px" row="2" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <label  id="padding2" height="20.0px" row="2" column="4"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="ShipCity" property="shipcity"  datasource="ordersqryDs"  height="20.0px" width="80.0px" row="2" column="5"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="ShipRegion" property="shipregion"  datasource="ordersqryDs"  height="20.0px" width="90.0px" row="2" column="6"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="ShipPostalCode" property="shippostalcode"  datasource="ordersqryDs"  height="20.0px" width="100.0px" row="2" column="7"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="padding3" height="20.0px" colspan="2" row="3" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Country" property="country"  datasource="ordersqryDs"  height="20.0px" width="150.0px" colspan="2" row="3" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="ShipCountry" property="shipcountry"  datasource="ordersqryDs"  height="20.0px" width="190.0px" colspan="2" row="3" column="6"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+              <label  id="Salesperson_Label" value="Salesperson:"  height="20.0px" row="4" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <lookupField   id="EmployeeID" property="employeeid"  datasource="ordersqryDs"  height="20.0px" width="170.0px" colspan="2" row="4" column="1"  align="MIDDLE_LEFT"  optionsDatasource="employeesesDs"/>
+            <groupBox  colspan="4" width="100%"  row="4" column="4"  caption="Ship Via:" >
+            <optionsGroup  id="ShipVia" property="shipvia"  datasource="ordersqryDs"  height="30.0px" width="500.0px" colspan="4" row="4" column="4"  orientation="horizontal" optionsDatasource="shippersesDs"/>
+            </groupBox>
+          </row>
+          <row>
+              <label  id="OrderID_Label" value="Order ID:"  height="20.0px" row="5" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="OrderID" property="orderid"  datasource="ordersqryDs"  height="20.0px" width="90.0px" row="5" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+              <label  id="OrderDate_Label" value="Order Date:"  height="20.0px" row="5" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <dateField resolution="DAY"  id="OrderDate" property="orderdate"  datasource="ordersqryDs"  height="20.0px" width="120.0px" row="5" column="3"   stylename="access-datefield"  align="MIDDLE_LEFT"/>
+              <label  id="RequiredDate_Label" value="Required Date:"  height="20.0px" row="5" column="4"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <dateField resolution="DAY"  id="RequiredDate" property="requireddate"  datasource="ordersqryDs"  height="20.0px" width="120.0px" row="5" column="5"   stylename="access-datefield"  align="MIDDLE_LEFT"/>
+              <label  id="ShippedDate_Label" value="Shipped Date:"  height="20.0px" row="5" column="6"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <dateField resolution="DAY"  id="ShippedDate" property="shippeddate"  datasource="ordersqryDs"  height="20.0px" width="120.0px" row="5" column="7"   stylename="access-datefield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <frame  id="Orders_Subform" screen="northwindsTest$Orders_subform.frame"  height="90.0px" width="700.0px" colspan="8" row="6" column="0" />
+          </row>
+          <row>
+              <label  id="padding4" height="20.0px" colspan="5" row="7" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="SubtotalLabel" value="Subtotal:"  height="20.0px" row="7" column="5"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Subtotal" height="20.0px" width="90.0px" row="7" column="6"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <button  id="DisplayProducts" value="Display products of the month"  height="20.0px" width="240.0px" colspan="3" row="8" column="0"  caption="Display products of the month" invoke="doActionDisplayProducts" stylename="access-button"/>
+            <button  id="PrintInvoice" value="Print Invoice"  height="20.0px" width="90.0px" row="8" column="4"  caption="Print Invoice" invoke="doActionPrintInvoice" stylename="access-button"/>
+              <label  id="Freight_Label" value="Freight"  height="20.0px" row="8" column="5"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Freight" property="freight"  datasource="ordersqryDs"  height="20.0px" width="90.0px" row="8" column="6"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+            <label  id="padding5" height="20.0px" colspan="6" row="9" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Line57" height="1.0px" width="90.0px" row="9" column="6"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+              <label  id="padding6" height="20.0px" colspan="5" row="10" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+              <label  id="TotalLabel" value="Total:"  height="20.0px" row="10" column="5"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Total" height="20.0px" width="90.0px" row="10" column="6"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

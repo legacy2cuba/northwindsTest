@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.northwindstest.reports.sales_totals_by_amount.Sales_totals_by_amountEdit"
+        datasource="salestotalsbyamountDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.northwindstest.reports.sales_totals_by_amount">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="748.8px" height="100%"  stylename="report" >
+      <grid spacing="true" id="ReportHeader"  height="82.799995px" width="360.0px"  >
+        <columns count="3"/>
+        <rows>
+          <row>
+            <label  id="Title" value="Sales Totals by Amount"  height="35.0px" colspan="3" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <textField  id="DatePrinted" height="20.0px" width="260.0px" colspan="2" row="1" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="PageHeader"  height="40.8px" width="792.07996px"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+            <label  id="padding0" height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="SaleAmountLabel" value="Sale Amount:"  height="20.0px" row="0" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="OrderIDLabel" value="Order ID:"  height="20.0px" row="0" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="CompanyNameLabel" value="Company Name:"  height="20.0px" row="0" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="CounterLabel" value="Counter:"  height="20.0px" row="0" column="4"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="Detail"  height="30.0px" width="819.68px"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+            <label  id="padding1" height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="SaleAmount" property="saleamount"  datasource="salestotalsbyamountDs"  height="20.0px" width="130.0px" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="OrderID" property="orderid"  datasource="salestotalsbyamountDs"  height="20.0px" width="90.0px" row="0" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="CompanyName" property="companyname"  datasource="salestotalsbyamountDs"  height="20.0px" width="270.0px" row="0" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Counter" height="20.0px" width="110.0px" row="0" column="4"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+          <row>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="GroupFooter0"  height="15.599999px" width="747.68px"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+          <label  id="padding2" height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          <label  id="Line13" height="1.0px" width="610.0px" colspan="4" row="0" column="1"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="PageFooter"  height="33.6px" width="747.68px"  >
+        <columns count="5"/>
+        <rows>
+          <row>
+            <label  id="Line16" height="1.0px" width="740.0px" colspan="5" row="0" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+              <label  id="PageTotalLabel" value="Page Total:"  height="20.0px" row="1" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="PageTotal" height="20.0px" width="130.0px" row="1" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <label  id="padding3" height="20.0px" colspan="2" row="1" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="PageNumber" height="20.0px" width="110.0px" row="1" column="4"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

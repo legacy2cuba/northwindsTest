@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        xmlns:app="http://schemas.cloudgarden.com/gui/0.1/ui-component.xsd"
+        caption="msg://caption"
+        class="com.xformix.northwindstest.forms.quarterly_orders.Quarterly_ordersCombo"
+        focusComponent="navigationTable"
+        lookupComponent="navigationTable"
+        messagesPack="com.xformix.northwindstest.forms.quarterly_orders">
+    <dsContext>
+        <groupDatasource id="quarterlyordersDs"
+                    class="com.xformix.northwindstest.entity.QuarterlyOrders"
+                    view="quarterlyOrders-view">
+            <query>
+              <![CDATA[ select e from northwindsTest$QuarterlyOrders e]]>
+            </query>
+        </groupDatasource>
+
+        <valueGroupDatasource id="sumqtr_4Ds" maxResults="1">
+            <query>
+                <![CDATA[ select sum(e.qtr_4) as sumqtr_4 from northwindsTest$QuarterlyOrdersByProduct e
+                     where e.customerid.customerid = :ds$quarterlyordersDs.customerid
+                     group by e.customerid.customerid
+                    ]]>
+            </query>
+            <properties>
+	                <property datatype="decimal"  name="sumqtr_4"/>
+            </properties>
+        </valueGroupDatasource>
+
+        <valueGroupDatasource id="sumqtr_1Ds" maxResults="1">
+            <query>
+                <![CDATA[ select sum(e.qtr_1) as sumqtr_1 from northwindsTest$QuarterlyOrdersByProduct e
+                     where e.customerid.customerid = :ds$quarterlyordersDs.customerid
+                     group by e.customerid.customerid
+                    ]]>
+            </query>
+            <properties>
+	                <property datatype="decimal"  name="sumqtr_1"/>
+            </properties>
+        </valueGroupDatasource>
+
+        <valueGroupDatasource id="sumqtr_3Ds" maxResults="1">
+            <query>
+                <![CDATA[ select sum(e.qtr_3) as sumqtr_3 from northwindsTest$QuarterlyOrdersByProduct e
+                     where e.customerid.customerid = :ds$quarterlyordersDs.customerid
+                     group by e.customerid.customerid
+                    ]]>
+            </query>
+            <properties>
+	                <property datatype="decimal"  name="sumqtr_3"/>
+            </properties>
+        </valueGroupDatasource>
+
+        <valueGroupDatasource id="sumqtr_2Ds" maxResults="1">
+            <query>
+                <![CDATA[ select sum(e.qtr_2) as sumqtr_2 from northwindsTest$QuarterlyOrdersByProduct e
+                     where e.customerid.customerid = :ds$quarterlyordersDs.customerid
+                     group by e.customerid.customerid
+                    ]]>
+            </query>
+            <properties>
+	                <property datatype="decimal"  name="sumqtr_2"/>
+            </properties>
+        </valueGroupDatasource>
+
+        <groupDatasource id="quarterlyordersbyproductDs"
+           class="com.xformix.northwindstest.entity.QuarterlyOrdersByProduct"
+                    view="quarterlyOrdersByProduct-view">
+           <query>
+              <![CDATA[ select e from northwindsTest$QuarterlyOrdersByProduct e                     where e.customerid.customerid = :ds$quarterlyordersDs.customerid
+]]>
+           </query>
+        </groupDatasource>
+
+
+    </dsContext>
+    <actions>
+        <action id="save"
+                caption="mainMsg://actions.Ok"
+                icon="icons/ok.png"
+                invoke="save"
+                shortcut="CTRL-ENTER"/>
+        <action id="cancel"
+                caption="mainMsg://actions.Cancel"
+                description="Esc"
+                icon="icons/cancel.png"
+                invoke="cancel"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="main">
+        <filter id="filter"
+                applyTo="navigationTable"
+                datasource="quarterlyordersDs">
+            <properties include=".*"/>
+        </filter>
+        <split id="main"
+               orientation="horizontal"
+               pos="20"
+               width="100%">
+            <vbox id="lookupBox"
+                  expand="navigationTable"
+                  height="100%"
+                  spacing="true">
+                <groupTable id="navigationTable"
+                            height="100%"
+                            width="100%">
+                    <actions>
+                        <action id="create"/>
+                        <action id="edit"/>
+                        <action id="remove"/>
+                    </actions>
+                    <columns>
+
+                    </columns>
+                    <rows datasource="quarterlyordersDs"/>
+                    <rowsCount/>
+                    <buttonsPanel id="buttonsPanel"
+                                  alwaysVisible="true"
+                                  responsive="true">
+                        <button id="createBtn"
+                                action="navigationTable.create"/>
+                        <button id="editBtn"
+                                action="navigationTable.edit"/>
+                        <button id="removeBtn"
+                                action="navigationTable.remove"/>
+                    </buttonsPanel>
+                </groupTable>
+            </vbox>
+            <vbox id="editBox"
+                  expand="fieldGroupBox"
+                  height="100%"
+                  margin="false,false,false,true"
+                  spacing="true">
+                <vbox id="fieldGroupBox">
+	            <frame id="customFrame" 
+	                   height="100%"
+	                   screen="northwindsTest$Quarterly_orders.frame"/> 
+	                </vbox>
+	                <hbox id="actionsPane"
+	                      spacing="true"
+	                      visible="false">
+	                    <button id="saveBtn"
+	                            action="save"/>
+	                    <button id="cancelBtn"
+	                            action="cancel"/>
+	                </hbox>
+	            </vbox>
+            </split>
+    </layout>
+</window>
