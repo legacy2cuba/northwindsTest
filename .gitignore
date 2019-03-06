@@ -9,3 +9,4 @@ modules/*/build/*
 modules/*/bin/*
 out
 test-run
+/bin/
