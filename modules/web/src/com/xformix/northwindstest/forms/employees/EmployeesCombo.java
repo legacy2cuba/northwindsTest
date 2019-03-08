@@ -8,6 +8,8 @@ import java.util.UUID;
 
 import javax.inject.Inject;
 
+import org.apache.log4j.Logger;
+
 import com.haulmont.cuba.core.entity.Entity;
 import com.haulmont.cuba.gui.components.Image;
 import com.haulmont.cuba.gui.components.Label;
@@ -22,6 +24,8 @@ import com.xformix.northwindstest.entity.Employees;
 
 public class EmployeesCombo extends CustomLookup {
 
+	private static Logger logger = Logger.getLogger(EmployeesCombo.class);
+	
 	@Inject
 	protected Table navigationTable;
 
@@ -125,8 +129,9 @@ public class EmployeesCombo extends CustomLookup {
 					MarvelCharacter superHero = getCharacter(emp.getFirstname().substring(0, 3));
 					superheroLabel.setValue(superHero.getName());
 					marvelImage.setSource(UrlResource.class).setUrl(new URL(superHero.getThumbnail()));
+					logger.info("Loaded image "+superHero.getThumbnail());
 				} catch (Exception e1) {
-					System.out.println("INFO: unable to load image, error: " + e1);
+					logger.warn("Unable to load image", e1);
 				}
 
 			}
