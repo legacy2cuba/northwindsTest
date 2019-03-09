@@ -31,5 +31,5 @@ IMPORTANT - replacing API keys
 >>>
 >>> You should obtain your own developer key (valid for both map and search apis) from https://developer.marvel.com/
 >>> and replace the "marvelapi.publicKey" and "marvelapi.privateKey" properties specified in 
->>> modules/core/src/com/xformix/northwindstest/local.app.properties
+>>> modules/core/src/com/xformix/northwindstest/app.properties
  
